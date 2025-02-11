@@ -7,11 +7,11 @@ export default function LoginSignUp() {
     <div className="title"><span>Login Form</span></div>
     <form action="#">
       <div className="row">
-      <i class="bi bi-person-circle"></i>
+      <i className="bi bi-person-circle"></i>
         <input type="text" placeholder="Email or Phone" required />
       </div>
       <div className="row">
-      <i class="bi bi-lock-fill"></i>
+      <i className="bi bi-lock-fill"></i>
         <input type="password" placeholder="Password" required />
       </div>
       <div className="row button">
