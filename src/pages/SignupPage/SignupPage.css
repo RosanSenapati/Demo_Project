@@ -96,7 +96,7 @@ form .row input::placeholder {
   text-decoration: underline;
 }
 
-.wrapper form .button input {
+.wrapper form .button input, button {
   margin-top: 20px;
   color: #fff;
   font-size: 20px;
@@ -107,7 +107,7 @@ form .row input::placeholder {
   cursor: pointer;
 }
 
-form .button input:hover {
+form .button input:hover, button:hover {
   background: #12876f;
 }
 
