@@ -18,7 +18,8 @@ export default function LoginSignUp() {
       });
       console.log(res);
       console.log(res.data);
-      res.data ? toast.success('Logged in successfully') : toast.error('invalid Credentials');
+
+      res.data ?toast.success('Logged in successfully') : toast.error('invalid Credentials');
       // navigate('/signup');
     } catch (err) {
       alert(err);

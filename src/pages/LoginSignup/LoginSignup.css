@@ -17,6 +17,11 @@ body {
   padding: 15px;
   background: white;
   overflow: hidden;
+  background-image:url('../../assests/2235887.jpg');
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-attachment: fixed;
 }
 
 .wrapper {

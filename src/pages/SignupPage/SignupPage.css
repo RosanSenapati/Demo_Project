@@ -15,23 +15,24 @@ body {
   justify-content: center;
   height: 100vh;
   padding: 15px;
-  background: white;
+  /* background: black; */
+  background-image: url(../../assests/2235887.jpg);
   overflow: hidden;
 }
 
 .wrapper {
   max-width: 500px;
   width: 70vw ;
-  background: #fff;
+  background: whitesmoke;
   border-radius: 5px;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper .title {
   height: 120px;
-  background: #16a085;
+  background: navy;
   border-radius: 5px 5px 0 0;
-  color: #fff;
+  color: whitesmoke;
   font-size: 30px;
   font-weight: 600;
   display: flex;
@@ -61,11 +62,11 @@ body {
 }
 
 form .row input:focus {
-  border-color: #16a085;
+  border-color:  navy;
 }
 
 form .row input::placeholder {
-  color: #999;
+  color:white;
 }
 
 .wrapper form .row i {
@@ -74,8 +75,8 @@ form .row input::placeholder {
   height: 100%;
   color: #fff;
   font-size: 22px;
-  background: #16a085;
-  border: 1px solid #16a085;
+  background:  navy;
+  border: 1px solid navy;
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -87,7 +88,7 @@ form .row input::placeholder {
 }
 
 .wrapper form .pass a {
-  color: #16a085;
+  color:  navy;
   font-size: 17px;
   text-decoration: none;
 }
@@ -102,13 +103,13 @@ form .row input::placeholder {
   font-size: 20px;
   font-weight: 500;
   padding-left: 0px;
-  background: #16a085;
-  border: 1px solid #16a085;
+  background:  navy;
+  border: 1px solid  navy;
   cursor: pointer;
 }
 
 form .button input:hover, button:hover {
-  background: #12876f;
+  background:  navy;
 }
 
 .wrapper form .signup-link {
@@ -118,7 +119,7 @@ form .button input:hover, button:hover {
 }
 
 .wrapper form .signup-link a {
-  color: #16a085;
+  color:  navy;
   text-decoration: none;
 }
 
