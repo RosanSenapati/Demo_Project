@@ -6,6 +6,8 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import {toast,ToastContainer} from 'react-toastify'
 
+
+
 // Yup validation schema
 const validationSchema = Yup.object({
   fullName: Yup.string()
@@ -13,7 +15,8 @@ const validationSchema = Yup.object({
     .min(3, 'Full Name must be at least 3 characters'),
   email: Yup.string()
     .required('Email is required')
-    .email('Invalid email format'),
+    .email('Invalid email format')
+    .matches(/^[A-Za-z0-9+_.-]+@(.+)$/,'Invalid email format'),
   password: Yup.string()
     .required('Password is required')
     .min(6, 'Password must be at least 6 characters')
@@ -43,16 +46,24 @@ function SignupPage() {
         onSubmit={async (values) => {
           console.log(values);
           try {
-            await axios.post("http://localhost:8081/user", {
+           const res = await axios.post("http://localhost:8081/user", {
             name: values.fullName,
             email: values.email,
             password: values.confirmPassword,
             });
-            alert("User Registation Successfully");
-              // toast.success('User Registration Successfully');
+
+            console.log(res);
+            console.log(res.data);
+           if(res)
+           {
+            alert('User Registration Successfull');
             navigate('/');
+           }
+              // toast.success('User Registration Successfully');
+            
           } catch (err) {
-            alert(err);
+            toast.error('Something Went Wrong!!!!');
+            console.log(err);
           }
         }
         }
@@ -93,18 +104,6 @@ function SignupPage() {
           </Form>
         )}
       </Formik>
-      {/* <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick={false}
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/> */}
     </div>
   );
 }

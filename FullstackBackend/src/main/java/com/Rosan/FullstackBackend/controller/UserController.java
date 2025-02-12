@@ -38,14 +38,14 @@ public class UserController {
 
     // User Login
     @PostMapping("/login")
-    public Boolean loginUser(@RequestBody User user) {
+    public User loginUser(@RequestBody User user) {
         Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
 
         if (existingUser.isPresent() && existingUser.get().getPassword().equals(user.getPassword())) {
-//            return existingUser.get();  // Successful login
-            return true;
+            return existingUser.get();  // Successful login
+//            return true;
         } else {
-            return false;
+            return null;
         }
     }
 
